@@ -27,6 +27,10 @@ class Entry : JavaPlugin() {
         config.options().copyDefaults(true)
         saveConfig()
         flipped = config.getBoolean("flipped")
+
+        if (!config.getBoolean("skip update check")) {
+            server.scheduler.runTaskTimerAsynchronously(this, UpdateManager(this), 0, 60 * 60 * 20)
+        }
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {

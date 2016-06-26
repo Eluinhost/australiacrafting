@@ -1,7 +1,7 @@
 AustraliaCrafting
 =================
 
-Built for Spigot 1.8+ with Java 6+
+Built for Spigot 1.8.3+ with Java 6+
 
 This plugin turns all crafting recipes upside down
 
@@ -22,7 +22,10 @@ Configuration
 
 ```yaml
 flipped: true
+skip update check: false
 ```
 
-The default state to start the server in. Will be updated via the 
+`flipped` - The default state to start the server in. Will be updated via the 
 `flipcrafts` command
+
+`skip update check` - set to true to stop checking/notifying for updates
